@@ -1,0 +1,20 @@
+{% extends "layout/base.html" %}
+
+{% block 'title' %} Eliminar {{ contact }} {% endblock  %}
+
+{% block 'content' %}
+<h1>¿Estás seguro de que deseas borrar este contacto?</h1>
+<br>
+<p><b>Nombre:</b> {{ contact.name }}</p>
+<br>
+<p><b>Correo electrónico:</b> {{ contact.email }}</p>
+<br>
+<p><b>Teléfono</b> {{ contact.mobile }}</p>
+<br>
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-delete">Sí, borrar</button>
+    <a href="{% url 'contact' %}" class="btn btn-detail">No, cancelar</a>
+</form>
+{% endblock %}

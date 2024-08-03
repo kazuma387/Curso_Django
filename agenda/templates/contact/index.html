@@ -1,0 +1,22 @@
+{% extends "layout/base.html" %}
+
+{% block 'title' %} Contactos {% endblock  %}
+
+{% block 'content' %}
+
+    {#para visulizar el mensaje #}
+    {% include "contact/partials/msg_delete.html" %}
+
+    <h1>Gestor de contactos</h1>
+
+    {% include "contact/partials/search.html" %}
+    {% include "contact/partials/by_initial.html" %}
+
+    <span class='btn-aux'>
+        <a href="{% url "contact" %}" class='btn btn-detail'>Ver todos</a>
+        <a href="{% url "contact_create" %}" class='btn btn-edit'>Añadir</a>
+    </span>
+
+    {% include "contact/partials/contact_list.html" %}
+
+{% endblock  %}

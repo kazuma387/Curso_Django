@@ -1,0 +1,231 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    --color-primary: rgb(19, 91, 235);
+    --color-text: #fcf2f2;
+    --color-text-2: #292929;
+    --color-btn-detail: #3972b3;
+    --color-btn-edit: #009933;
+    --color-btn-delete: #cd2828;
+}
+
+body {
+    padding-bottom: 40px;
+}
+
+header {
+    width: 100vw;
+    background-color: var(--color-primary);
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li a {
+    font-size: 20px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: var(--color-text-2);
+}
+
+main {
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    max-height: 78vh;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: auto;
+}
+
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%
+}
+
+h1 {
+    padding-bottom: 16px;
+}
+
+/* contact list */
+.list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-text-2);
+    border-radius: 10px;
+    list-style-type: none;
+    width: 50%;
+}
+
+/* aplica a todas menos a la ultima */
+.list li:not(:last-child) {
+    border-bottom: 1px solid var(--color-text-2);
+}
+
+.list li {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* btn de contact */
+.btn {
+    font-weight: 200;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid var(--color-text-2);
+    border-radius: 5px;
+}
+
+.btn-detail {
+    padding: 5px 15px;
+    background-color: var(--color-btn-detail);
+    color: var(--color-text);
+}
+
+.btn-edit {
+    background-color: var(--color-btn-edit);
+    color: var(--color-text);
+}
+
+.btn-delete {
+    background-color: var(--color-btn-delete);
+    color: var(--color-text);
+}
+
+/* para el hover */
+.btn-detail:hover {
+    padding: 5px 15px;
+    background-color: var(--color-text);
+    color: var(--color-btn-detail);
+    border: 1px solid var(--color-btn-detail);
+}
+
+.btn-edit:hover {
+    background-color: var(--color-text);
+    color: var(--color-btn-edit);
+    border: 1px solid var(--color-btn-edit);
+}
+
+.btn-delete:hover {
+    background-color: var(--color-text);
+    color: var(--color-btn-delete);
+    border: 1px solid var(--color-btn-delete);
+}
+
+/*Barra de busqueda  */
+.search {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.search input {
+    padding: 5px;
+}
+
+/* botones auxiliares de mostrar todo y añadir */
+.btn-aux {
+    width: 50%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.btn-aux a {
+    width: 80%;
+
+}
+
+/* del mensaje */
+.alert-delete {
+    background: var(--color-btn-delete);
+    color: var(--color-text);
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    list-style-type: none;
+}
+
+/* targetas del index principal */
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+} 
+
+.card {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-btn-detail);
+    color: var(--color-text);
+    margin: 20px;
+}
+
+.card a {
+    font-weight: 200;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.card a:hover {
+    color: var(--color-text-2);
+}
+
+/* buscador por letras */
+.letters {
+    margin-bottom: 10px;
+}
+
+.letters a {
+    font-weight: 200;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-btn-detail);
+    cursor: pointer;
+}
+
+.letters a:hover {
+    color: var(--color-btn-edit); /* Cambia el color de fondo */
+    border-bottom: 2px solid var(--color-btn-edit); /* Añade una línea debajo */
+    font-weight: bold; /* Resalta la letra */
+}
+
+
+
+
+

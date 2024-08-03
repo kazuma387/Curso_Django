@@ -1,0 +1,17 @@
+<ul class='list'>
+    {% for contact in contacts %}
+    <li>
+        {{contact}}
+        <span>
+            <a href="{% url "contact_view" id=contact.id %}" class='btn btn-detail'>Ver</a>
+            <a href="{% url "contact_edit" id=contact.id %}" class='btn btn-edit'>Editar</a>
+            <a href="{% url "contact_delete" id=contact.id %}" class='btn btn-delete'>Borrar</a>
+        </span>
+    </li>
+    {% endfor %}
+
+    {#para visulizar el mensaje de no encontrado #}
+    {% if no_results_message %}
+        <li>{{ no_results_message }}</li>
+    {% endif %}
+</ul>

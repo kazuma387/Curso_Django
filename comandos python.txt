@@ -1,0 +1,110 @@
+// crear un entorno virtual
+python -m venv env
+
+// activar entorno virtual
+env\Scripts\activate
+
+// desactivar el entorno virtual
+deactivate
+
+// importante para que el código se vea bien
+pip install autopep8
+
+// que dependencias y versiones tiene el entrono virtual
+pip freeze
+
+// crear archivo de requerimientos
+pip freeze > "requirements.txt"
+
+// recrear un entorno (instalar requerimientos) 
+pip install -r "requirements.txt"
+
+*********************************************************
+
+Django
+
+// crear un proyecto en django
+django-admin startproject mysite
+
+// para migrar toda la información a la DB
+Py manage.py migrate
+
+// acceso al servidor de desarrollo
+py manage.py runserver
+
+// crear una aplicacion dentro de un proyecto
+py manage.py startapp myapp
+
+// chequear si una app esta intalada
+py manage.py check myapp
+
+// para solicitar a python que haga las migraciones luedo de hacer las clases en modelos
+py manage.py makemigrations
+
+// para crear el super usuario y poder entrar el en panel de administración de nuestra app
+py manage.py createsuperuser
+
+***************************
+// para usar el seed que es para llenar la db y hacer pruebas
+pip install django-seed
+
+INSTALLED_APPS = (
+    ...
+    'django_seed',
+)
+
+pip install psycopg2-binary
+
+py manage.py seed nombreapp --number=15
+
+*********************************************************
+
+crear un ejecutable
+
+para instalar pyinstaller en nuestro env
+pip install pyinstaller
+
+para ejecutar y crear el ejecutable si solo tenemos un script
+pyinstaller your_program.py
+
+para varios scripts
+pyi-makespec main.py --windowed
+
+al crear el achivo
+en data -> ('./img/*.ico', 'img'), ('./database/*.db', 'database')
+
+para crear el ejecutable 
+pyinstaller main.spec
+
+*************************************************************************
+
+<style>
+        .messages {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .success {
+            border-left: 5px solid green;
+        }
+    </style>
+
+<script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            setTimeout(() => {
+                let messages = document.querySelector('.messages');
+                if (messages) {
+                    messages.style.transition = 'opacity 0.5s ease-out';
+                    messages.style.opacity = '0';
+                    setTimeout(() => {
+                        messages.remove();
+                    }, 500);
+                }
+            }, 3000); // 3000ms = 3 seconds
+        });
+    </script>

@@ -1,0 +1,41 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-color: rgb(122, 104, 59);
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li a {
+    font-size: 20px;
+    color: blanchedalmond;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+}
+
+footer {
+    background-color: rgb(122, 104, 59);
+    color: blanchedalmond;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}

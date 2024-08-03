@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta</title>
+</head>
+<body>
+    <h3>obtener un unico elemeto (filtrado por id)</h3>
+    <p>{{author.name}} ({{author.email}})</p>
+
+    <h3>Buscando Autor donde email = james62@example.com</h3>
+    <ul>
+        {# hacemos un for para pintar los autores especificados #}
+        {% for elm in filtered %}
+        <li>{{elm.name}} ({{elm.email}})</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Buscando Autor cuyo id sea mayor o igual a 10 y menor o igual a 20</h3>
+    <ul>
+        {# hacemos un for para pintar los autores especificados #}
+        {% for elm in filtered2 %}
+        <li>{{elm.name}} ({{elm.email}})</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Buscando elementos que contengan la palabra play(filtrado)</h3>
+    <ul>
+        {# hacemos un for para pintar los autores especificados #}
+        {% for elm in filtered3 %}
+        <li>{{elm.name}} ({{elm.email}})</li>
+        {% endfor %}
+    </ul>
+
+    <h3>los 10 primeros Autores</h3>
+    <ul>
+        {# hacemos un for para pintar los 10 primeros autores #}
+        {% for author in limit %}
+        <li>{{author.name}} ({{author.email}})</li>
+        {% endfor %}
+    </ul>
+
+    <h3>5 Autores saltando 5 primeros</h3>
+    <ul>
+        {# hacemos un for para pintar los 5 autores saltando 5 primeros #}
+        {% for author in offset %}
+        <li>{{author.name}} ({{author.email}})</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Todos los Autores ordenados por email</h3>
+    <ul>
+        {# hacemos un for para pintar todos los autores ordenados #}
+        {% for author in orders %}
+        <li>{{author.email}}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Todos los Autores</h3>
+    <ul>
+        {# hacemos un for para pintar todos los autores #}
+        {% for author in authors %}
+        <li>{{author.name}} ({{author.email}})</li>
+        {% endfor %}
+    </ul>
+    {# aplicando un filtro #}
+    <h3>Total de Autores: {{authors|length}}</h3>
+</body>
+</html>
